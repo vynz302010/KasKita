@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Anggota - KasKita</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>KasKita</h1>
+                <p>Panel Admin</p>
+            </div>
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="anggota.html" class="active">Anggota</a></li>
+                    <li><a href="../index.html" class="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Kelola Anggota</h2>
+                <p>Tambah dan kelola data anggota kas</p>
+            </div>
+
+            <!-- Add Member Form -->
+            <div class="content-section form-section">
+                <h3 style="margin-bottom: 20px; color: #2C3E50;">Tambah Anggota Baru</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="email@contoh.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telepon">Nomor Telepon</label>
+                            <input type="tel" id="telepon" placeholder="08123456789">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal_bergabung">Tanggal Bergabung</label>
+                            <input type="date" id="tanggal_bergabung" value="2025-10-07">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat" placeholder="Masukkan alamat lengkap..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan Anggota</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Members Table -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3>Daftar Anggota</h3>
+                    <div style="color: #7F8C8D; font-size: 14px;">Total: 24 Anggota</div>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Telepon</th>
+                            <th>Tanggal Bergabung</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">Budi Santoso</td>
+                            <td>budi.santoso@email.com</td>
+                            <td>0812-3456-7890</td>
+                            <td>15 Jan 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Siti Nurhaliza</td>
+                            <td>siti.nurhaliza@email.com</td>
+                            <td>0813-4567-8901</td>
+                            <td>20 Jan 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Ahmad Fauzi</td>
+                            <td>ahmad.fauzi@email.com</td>
+                            <td>0814-5678-9012</td>
+                            <td>25 Jan 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Rina Wati</td>
+                            <td>rina.wati@email.com</td>
+                            <td>0815-6789-0123</td>
+                            <td>01 Feb 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Dewi Lestari</td>
+                            <td>dewi.lestari@email.com</td>
+                            <td>0816-7890-1234</td>
+                            <td>10 Feb 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Rudi Hermawan</td>
+                            <td>rudi.hermawan@email.com</td>
+                            <td>0817-8901-2345</td>
+                            <td>15 Feb 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Indah Permata</td>
+                            <td>indah.permata@email.com</td>
+                            <td>0818-9012-3456</td>
+                            <td>20 Feb 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Arif Setiawan</td>
+                            <td>arif.setiawan@email.com</td>
+                            <td>0819-0123-4567</td>
+                            <td>25 Feb 2024</td>
+                            <td><span class="badge badge-warning">Nonaktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Maya Kusuma</td>
+                            <td>maya.kusuma@email.com</td>
+                            <td>0821-1234-5678</td>
+                            <td>01 Mar 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Hendra Wijaya</td>
+                            <td>hendra.wijaya@email.com</td>
+                            <td>0822-2345-6789</td>
+                            <td>05 Mar 2024</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-anggota.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

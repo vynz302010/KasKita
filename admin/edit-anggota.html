@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Anggota - KasKita</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>KasKita</h1>
+                <p>Panel Admin</p>
+            </div>
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="anggota.html" class="active">Anggota</a></li>
+                    <li><a href="../index.html" class="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Edit Anggota</h2>
+                <p>Perbarui informasi anggota</p>
+            </div>
+
+            <!-- Edit Member Form -->
+            <div class="content-section form-section">
+                <h3 style="margin-bottom: 20px; color: #2C3E50;">Detail Anggota</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" value="Budi Santoso">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="budi.santoso@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telepon">Nomor Telepon</label>
+                            <input type="tel" id="telepon" value="0812-3456-7890">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal_bergabung">Tanggal Bergabung</label>
+                            <input type="date" id="tanggal_bergabung" value="2024-01-15">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option selected>Aktif</option>
+                                <option>Nonaktif</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat</label>
+                        <textarea id="alamat">Jl. Merpati No. 45, RT 05/RW 03, Kelurahan Sukamaju, Kecamatan Cibeunying, Bandung 40123</textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="anggota.html" class="btn btn-secondary">Batal</a>
+                        <button type="submit" class="btn btn-success">Update Anggota</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Member Statistics -->
+            <div class="content-section">
+                <h3 style="margin-bottom: 20px; color: #2C3E50;">Statistik Kontribusi</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <h3>Total Kontribusi</h3>
+                            <div class="stat-icon green">💵</div>
+                        </div>
+                        <div class="stat-value">Rp 450.000</div>
+                        <div class="stat-label">Sejak bergabung</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <h3>Jumlah Transaksi</h3>
+                            <div class="stat-icon blue">📊</div>
+                        </div>
+                        <div class="stat-value">9</div>
+                        <div class="stat-label">Total transaksi</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <h3>Lama Bergabung</h3>
+                            <div class="stat-icon orange">📅</div>
+                        </div>
+                        <div class="stat-value">9 Bulan</div>
+                        <div class="stat-label">Sejak Jan 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Info -->
+            <div class="content-section">
+                <h3 style="margin-bottom: 15px; color: #2C3E50;">Informasi Tambahan</h3>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600; width: 200px;">ID Anggota</td>
+                            <td>#AGT-2024-001</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Terdaftar Pada</td>
+                            <td>15 Januari 2024, 10:00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Diubah Terakhir</td>
+                            <td>15 Januari 2024, 10:00 WIB</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Status Keanggotaan</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

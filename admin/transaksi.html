@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Transaksi - KasKita</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>KasKita</h1>
+                <p>Panel Admin</p>
+            </div>
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                    <li><a href="anggota.html">Anggota</a></li>
+                    <li><a href="../index.html" class="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Kelola Transaksi</h2>
+                <p>Tambah dan kelola semua transaksi kas</p>
+            </div>
+
+            <!-- Add Transaction Form -->
+            <div class="content-section form-section">
+                <h3 style="margin-bottom: 20px; color: #2C3E50;">Tambah Transaksi Baru</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal</label>
+                            <input type="date" id="tanggal" value="2025-10-07">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kategori">Kategori</label>
+                            <select id="kategori">
+                                <option>Pilih Kategori</option>
+                                <option>Pemasukan</option>
+                                <option>Pengeluaran</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anggota">Anggota</label>
+                            <select id="anggota">
+                                <option>Pilih Anggota</option>
+                                <option>Budi Santoso</option>
+                                <option>Siti Nurhaliza</option>
+                                <option>Ahmad Fauzi</option>
+                                <option>Rina Wati</option>
+                                <option>Admin</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jumlah">Jumlah (Rp)</label>
+                            <input type="number" id="jumlah" placeholder="50000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea id="deskripsi" placeholder="Masukkan deskripsi transaksi..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan Transaksi</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Transactions Table -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3>Riwayat Transaksi</h3>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Deskripsi</th>
+                            <th>Kategori</th>
+                            <th>Anggota</th>
+                            <th>Jumlah</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>05 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Budi Santoso</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>04 Okt 2025</td>
+                            <td>Beli Spidol untuk Papan</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 25.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>03 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Siti Nurhaliza</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02 Okt 2025</td>
+                            <td>Bayar Sewa Tempat Rapat</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 150.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>01 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Ahmad Fauzi</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30 Sep 2025</td>
+                            <td>Iuran Bulanan September</td>
+                            <td>Pemasukan</td>
+                            <td>Rina Wati</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>28 Sep 2025</td>
+                            <td>Beli Konsumsi Rapat</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 75.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25 Sep 2025</td>
+                            <td>Iuran Bulanan September</td>
+                            <td>Pemasukan</td>
+                            <td>Dewi Lestari</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22 Sep 2025</td>
+                            <td>Donasi untuk Acara RT</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 200.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20 Sep 2025</td>
+                            <td>Iuran Bulanan September</td>
+                            <td>Pemasukan</td>
+                            <td>Rudi Hermawan</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="edit-transaksi.html" class="btn btn-primary btn-small">Edit</a>
+                                    <button class="btn btn-danger btn-small">Hapus</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

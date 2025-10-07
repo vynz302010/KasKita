@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - KasKita</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>KasKita</h1>
+                <p>Panel Admin</p>
+            </div>
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="transaksi.html">Transaksi</a></li>
+                    <li><a href="anggota.html">Anggota</a></li>
+                    <li><a href="../index.html" class="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Dashboard</h2>
+                <p>Ringkasan kas dan aktivitas terkini</p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <h3>Total Saldo</h3>
+                        <div class="stat-icon blue">💰</div>
+                    </div>
+                    <div class="stat-value">Rp 1.150.000</div>
+                    <div class="stat-label">Saldo kas saat ini</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <h3>Pemasukan</h3>
+                        <div class="stat-icon green">📈</div>
+                    </div>
+                    <div class="stat-value">Rp 2.350.000</div>
+                    <div class="stat-label">Total pemasukan bulan ini</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <h3>Pengeluaran</h3>
+                        <div class="stat-icon red">📉</div>
+                    </div>
+                    <div class="stat-value">Rp 1.200.000</div>
+                    <div class="stat-label">Total pengeluaran bulan ini</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card-header">
+                        <h3>Total Anggota</h3>
+                        <div class="stat-icon orange">👥</div>
+                    </div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">Anggota aktif</div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h3>Transaksi Terakhir</h3>
+                    <a href="transaksi.html" class="btn btn-primary btn-small">Lihat Semua</a>
+                </div>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Deskripsi</th>
+                            <th>Kategori</th>
+                            <th>Anggota</th>
+                            <th>Jumlah</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>05 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Budi Santoso</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                        </tr>
+                        <tr>
+                            <td>04 Okt 2025</td>
+                            <td>Beli Spidol untuk Papan</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 25.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                        </tr>
+                        <tr>
+                            <td>03 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Siti Nurhaliza</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                        </tr>
+                        <tr>
+                            <td>02 Okt 2025</td>
+                            <td>Bayar Sewa Tempat Rapat</td>
+                            <td>Pengeluaran</td>
+                            <td>Admin</td>
+                            <td style="color: #E94E77; font-weight: 600;">-Rp 150.000</td>
+                            <td><span class="badge badge-danger">Keluar</span></td>
+                        </tr>
+                        <tr>
+                            <td>01 Okt 2025</td>
+                            <td>Iuran Bulanan Oktober</td>
+                            <td>Pemasukan</td>
+                            <td>Ahmad Fauzi</td>
+                            <td style="color: #50E3C2; font-weight: 600;">+Rp 50.000</td>
+                            <td><span class="badge badge-success">Masuk</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

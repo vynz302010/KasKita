@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Transaksi - KasKita</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>KasKita</h1>
+                <p>Panel Admin</p>
+            </div>
+            <nav>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transaksi.html" class="active">Transaksi</a></li>
+                    <li><a href="anggota.html">Anggota</a></li>
+                    <li><a href="../index.html" class="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h2>Edit Transaksi</h2>
+                <p>Perbarui informasi transaksi</p>
+            </div>
+
+            <!-- Edit Transaction Form -->
+            <div class="content-section form-section">
+                <h3 style="margin-bottom: 20px; color: #2C3E50;">Detail Transaksi</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal</label>
+                            <input type="date" id="tanggal" value="2025-10-04">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kategori">Kategori</label>
+                            <select id="kategori">
+                                <option>Pemasukan</option>
+                                <option selected>Pengeluaran</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anggota">Anggota</label>
+                            <select id="anggota">
+                                <option>Budi Santoso</option>
+                                <option>Siti Nurhaliza</option>
+                                <option>Ahmad Fauzi</option>
+                                <option>Rina Wati</option>
+                                <option selected>Admin</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jumlah">Jumlah (Rp)</label>
+                            <input type="number" id="jumlah" value="25000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <textarea id="deskripsi">Beli Spidol untuk Papan</textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="transaksi.html" class="btn btn-secondary">Batal</a>
+                        <button type="submit" class="btn btn-success">Update Transaksi</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Transaction Info -->
+            <div class="content-section">
+                <h3 style="margin-bottom: 15px; color: #2C3E50;">Informasi Tambahan</h3>
+                <table class="data-table">
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600; width: 200px;">ID Transaksi</td>
+                            <td>#TRX-20251004-002</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Dibuat Pada</td>
+                            <td>04 Oktober 2025, 14:30 WIB</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Diubah Terakhir</td>
+                            <td>04 Oktober 2025, 14:30 WIB</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Status</td>
+                            <td><span class="badge badge-danger">Pengeluaran</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
